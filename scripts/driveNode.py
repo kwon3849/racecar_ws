@@ -25,6 +25,7 @@ class Drive:
 		self.drive_pub = rospy.Publisher("/drive", drive_msg, queue_size=1)
 		self.cmd.velocity = 100
 		self.cmd.drive_angle = 100
+		self.drive_callback()
 
 		self.cartPoints = [None for x in range(500)]
 		self.finalVector = [100, 0]
